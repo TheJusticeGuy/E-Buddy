@@ -1,5 +1,4 @@
 using UnityEngine;
-using static System.Net.Mime.MediaTypeNames;
 
 public class QUIT : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class QUIT : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #else
         // If running as a standalone build, quit the application.
-        Application.Quit();
+        UnityEngine.Application.Quit(); // Explicitly specify UnityEngine.Application
 #endif
     }
 }
